@@ -6,13 +6,17 @@ import Colors from './components/Colors';
 import ColorScreen from './components/ColorScreen';
 import * as Animatable from 'react-native-animatable';
 
-const TabArr = [
-  { route: 'Home', label: 'Home', type: Icons.Ionicons, activeIcon: 'grid', inActiveIcon: 'grid-outline', component: ColorScreen },
-  { route: 'Like', label: 'Like', type: Icons.MaterialCommunityIcons, activeIcon: 'heart-plus', inActiveIcon: 'heart-plus-outline', component: ColorScreen },
-  { route: 'Search', label: 'Search', type: Icons.MaterialCommunityIcons, activeIcon: 'timeline-plus', inActiveIcon: 'timeline-plus-outline', component: ColorScreen },
-  { route: 'Account', label: 'Account', type: Icons.FontAwesome, activeIcon: 'user-circle', inActiveIcon: 'user-circle-o', component: ColorScreen },
-];
+import HomeScreen from './screen/HomeScreen';
+import LikeScreen from './screen/LikeScreen';
+import SearchScreen from './screen/SearchScreen';
+import AccountScreen from './screen/AccountScreen';
 
+const TabArr = [
+  { route: 'Home', label: 'Home', type: Icons.Ionicons, activeIcon: 'grid', inActiveIcon: 'grid-outline', component: HomeScreen },
+  { route: 'Like', label: 'Like', type: Icons.MaterialCommunityIcons, activeIcon: 'heart-plus', inActiveIcon: 'heart-plus-outline', component: LikeScreen },
+  { route: 'Search', label: 'Search', type: Icons.MaterialCommunityIcons, activeIcon: 'timeline-plus', inActiveIcon: 'timeline-plus-outline', component: SearchScreen },
+  { route: 'Account', label: 'Account', type: Icons.FontAwesome, activeIcon: 'user-circle', inActiveIcon: 'user-circle-o', component: AccountScreen },
+];
 const Tab = createBottomTabNavigator();
 
 const TabButton = (props) => {
